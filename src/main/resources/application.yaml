@@ -4,3 +4,22 @@ server:
 spring:
   application:
     name: auth
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth
+    username: ${DB_USER:user}
+    password: ${DB_PASSWORD:password123}
+    driver-class-Name: org.postgresql.Driver
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-0-master.xml
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
