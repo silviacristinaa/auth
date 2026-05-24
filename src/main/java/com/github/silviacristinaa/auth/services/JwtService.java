@@ -73,6 +73,8 @@ public class JwtService {
             return extractClaims(token).getExpiration().before(new Date());
         } catch (ExpiredJwtException e) {
             return true;
+        } catch (JwtException | IllegalArgumentException e) {
+            return false;
         }
     }
 
