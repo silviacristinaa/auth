@@ -8,5 +8,6 @@
     <include file="changes/001-create-user-table.xml" relativeToChangelogFile="true" />
     <include file="changes/002-create-role-table.xml" relativeToChangelogFile="true" />
     <include file="changes/003-create-user-role-table.xml" relativeToChangelogFile="true" />
+    <include file="changes/004-insert-default-roles.xml" relativeToChangelogFile="true" />
 
 </databaseChangeLog>
